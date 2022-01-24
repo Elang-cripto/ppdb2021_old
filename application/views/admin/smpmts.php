@@ -55,8 +55,8 @@
                                     <th rowspan="2" style='vertical-align:middle'>NPSN</th>
                                     <th rowspan="2" style='vertical-align:middle'>Lembaga</th>
                                     <th rowspan="2" style='vertical-align:middle'>Alamat</th>
-                                    <th colspan="3">MTS</th>
-                                    <th colspan="3">SMP</th>
+                                    <th colspan="3">MA</th>
+                                    <th colspan="3">SMK</th>
                                     <th rowspan="2" style='vertical-align:middle'>Aksi</th>
                                 </tr>
                                 <tr>

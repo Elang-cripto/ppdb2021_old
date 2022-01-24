@@ -261,6 +261,12 @@ class M_ppdb extends CI_Model
         // $this->db->where('status', 'AKTIF');
         return $this->db->get($db_pilih)->result();
     }
+
+    public function view_cek($par, $id)
+    {
+        $pilih = 'db_' . strtolower($par);
+        return $this->db->get_where($pilih, ["id_enc" => $id])->row();
+    }
 }
 
 /* End of file m_ppdb.php */
