@@ -12,23 +12,17 @@ class Validasi extends CI_Controller
         $this->load->helper(array('form', 'url', 'tgl_indo'));
     }
 
-    // public function index()
-    // {
-    //     $par = $this->uri->segment(2);
-    //     $id = $this->uri->segment(3);
-
-    //     $data['cari']         = $this->m_ppdb->view_cek($par, $id);
-    //     // $data['content']      = 'admin/edit';
-
-    //     $this->load->view('cekdata', $data);
-    // }
+    public function index()
+    {
+        $this->load->view('auth/login');
+    }
 
     public function data($par, $id)
     {
-        $data['cari']         = $this->m_ppdb->view_cek($par, $id);
-        $data['form']       = 'bukti';
-        $data['content']    = 'border';
+        $cari['data']         = $this->m_ppdb->view_cek($par, $id);
+        $cari['form']       = 'bukti';
+        $cari['content']    = 'border';
 
-        $this->load->view('cekdata', $data);
+        $this->load->view('cekdata', $cari);
     }
 }

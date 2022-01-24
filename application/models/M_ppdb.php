@@ -213,7 +213,7 @@ class M_ppdb extends CI_Model
 
         $image_name = $nikqr . '.png'; //buat name dari qr code sesuai dengan nim
 
-        $params['data'] = base_url('') . 'cek/' . $par . '/' . $nikqr; //data yang akan di jadikan QR CODE
+        $params['data'] = base_url('') . 'validasi/data/' . $par . '/' . $nikqr; //data yang akan di jadikan QR CODE
         $params['level'] = 'H'; //H=High
         $params['size'] = 10;
         $params['savename'] = FCPATH . $config['imagedir'] . $image_name; //simpan image QR CODE ke folder assets/qr/
@@ -262,6 +262,7 @@ class M_ppdb extends CI_Model
         return $this->db->get($db_pilih)->result();
     }
 
+    //============================= cek validasi ============================
     public function view_cek($par, $id)
     {
         $pilih = 'db_' . strtolower($par);
